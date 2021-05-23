@@ -42,29 +42,41 @@ var Wizard = /** @class */ (function (_super) {
     Wizard.prototype.newTroops = function () {
         console.log(this.charName() + " the White, is " + this.getNewTroops());
     };
+    Wizard.prototype.joinGreatArmy = function (army) {
+        return army;
+    };
+    Wizard.prototype.settingSpy = function (spy) {
+        return spy;
+    };
     return Wizard;
 }(Character));
-var Badguy = /** @class */ (function (_super) {
-    __extends(Badguy, _super);
-    function Badguy() {
+var DarkWizard = /** @class */ (function (_super) {
+    __extends(DarkWizard, _super);
+    function DarkWizard() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Badguy.prototype.charName = function () {
+    DarkWizard.prototype.charName = function () {
         return "Saruman";
     };
-    Badguy.prototype.specialAttack = function () {
+    DarkWizard.prototype.specialAttack = function () {
         return "Blasting Fire";
     };
-    Badguy.prototype.improvingUrukhai = function () {
+    DarkWizard.prototype.improvingUrukhai = function () {
         return "Special warriors higher speed and motivation to kidnap and scape";
     };
-    Badguy.prototype.improve = function () {
+    DarkWizard.prototype.improve = function () {
         console.log(this.charName() + " is giving his " + this.improvingUrukhai());
     };
-    return Badguy;
+    return DarkWizard;
 }(Character));
 var gandarlf = new Wizard();
-var saruman = new Badguy();
+var saruman = new DarkWizard();
+var armyRace = gandarlf.joinGreatArmy("elf");
+var armySoldiers = gandarlf.joinGreatArmy("10000");
+console.log("Let's welcome our new " + armySoldiers + " " + armyRace + " soldiers");
+var spyStatus = gandarlf.settingSpy("infiltrated");
+var spyInfiltrated = gandarlf.settingSpy(2);
+console.log("We have " + spyInfiltrated + " spies in status " + spyStatus);
 gandarlf.newTroops();
 saruman.improve();
 gandarlf.introduce();

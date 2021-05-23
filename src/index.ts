@@ -28,9 +28,17 @@ class Wizard extends Character{
     newTroops() {
         console.log(`${this.charName()} the White, is ${this.getNewTroops()}`);
     }
+
+    joinGreatArmy<T>(army:T):T{
+        return army;
+    }
+
+    settingSpy<X>(spy:X):X{
+        return spy;
+    }
 }
 
-class Badguy extends Character{
+class DarkWizard extends Character{
     charName(): string {
         return "Saruman";
     }
@@ -47,8 +55,15 @@ class Badguy extends Character{
 }
 
 const gandarlf = new Wizard();
-const saruman = new Badguy();
+const saruman = new DarkWizard();
 
+const armyRace= gandarlf.joinGreatArmy("elf");
+const armySoldiers = gandarlf.joinGreatArmy("10000");
+console.log(`Let's welcome our new ${armySoldiers} ${armyRace} soldiers`)
+
+const spyStatus = gandarlf.settingSpy("infiltrated");
+const spyInfiltrated = gandarlf.settingSpy(2);
+console.log(`We have ${spyInfiltrated} spies in status ${spyStatus}`)
 
 gandarlf.newTroops();
 saruman.improve();

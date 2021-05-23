@@ -1,7 +1,6 @@
 {
-  "name": "T2",
+  "name": "t2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon",
@@ -17,5 +16,15 @@
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorvcode/JsTs3_L2T2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hectorvcode/JsTs3_L2T2/issues"
+  },
+  "homepage": "https://github.com/hectorvcode/JsTs3_L2T2#readme",
+  "description": ""
 }
